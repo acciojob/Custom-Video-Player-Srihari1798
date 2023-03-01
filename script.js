@@ -6,3 +6,13 @@ const progressBar = player.querySelector('.progress__filled');
 const toggle = player.querySelector('.toggle');
 const skipButtons = player.querySelectorAll('[data-skip]');
 const ranges = player.querySelectorAll('.player__slider');
+
+playButton.addEventListener('click', () => {
+  if (video.paused) {
+    video.play();
+    playButton.textContent = '❚ ❚';
+  } else {
+    video.pause();
+    playButton.textContent = '►';
+  }
+});
